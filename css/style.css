@@ -1,0 +1,562 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  background: #0f172a; /* azul escuro moderno */
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #fff; /* 👈 linha branca */
+}
+
+/* FLEX */
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+/* LOGO */
+.logo h1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* MENU */
+.nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #fff;
+}
+
+/* BOTÃO WHATSAPP */
+.btn-whatsapp {
+  background: #22c55e;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background: #16a34a;
+}
+
+/* BOTÃO VOLTAR AO TOPO */
+#btnTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #22c55e;
+  color: #fff;
+  border: none;
+
+  width: 50px;   /* 👈 largura fixa */
+  height: 50px;  /* 👈 altura fixa */
+
+  border-radius: 50%; /* 👈 deixa redondo */
+  
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s;
+}
+
+#btnTop:hover {
+  background: #16a34a;
+}
+
+#btnTop:hover {
+  background: #16a34a;
+}
+
+/* FUNDO ESCURO */
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.7);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 3000;
+}
+
+/* CAIXA DO POPUP */
+.popup-content {
+  background: #0f172a;
+  color: #fff;
+
+  padding: 30px;
+  border-radius: 12px;
+
+  text-align: center;
+
+  max-width: 320px;
+  width: 90%;
+
+  /* ANIMAÇÃO */
+  transform: scale(0.8);
+  opacity: 0;
+  animation: popupShow 0.5s ease forwards;
+}
+
+/* ANIMAÇÃO DE ENTRADA */
+@keyframes popupShow {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* BOTÃO */
+#closePopup {
+  margin-top: 20px;
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #22c55e;
+  color: #fff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+/* HOVER */
+#closePopup:hover {
+  background: #16a34a;
+}
+
+/* BANNER */
+.banner {
+  height: 90vh;
+  background: url('https://www.superstore.com.br/images/lojas/foto-13-gr.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+/* Overlay escuro (pra dar contraste) */
+.banner::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.363);
+  top: 0;
+  left: 0;
+}
+
+/* Conteúdo */
+.banner-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+/* Título */
+.banner h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+/* Texto */
+.banner p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* Botão */
+.btn-banner {
+  background: #0f172a;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn-banner:hover {
+  background: #0f172a70;
+}
+
+/* SEÇÃO */
+.produtos {
+  padding: 60px 0;
+  background: #f8fafc;
+  text-align: center;
+}
+
+/* TÍTULO */
+.titulo-secao {
+  color: #0f172a;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* CARD */
+.card-produto {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  transition: 0.3s;
+  border: 1px solid #22c55e; 
+}
+
+.card-produto:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGEM */
+.card-produto img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* NOME */
+.card-produto h3 {
+  color: #0f172a;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* PREÇO */
+.preco {
+  color: #22c55e;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* BOTÃO */
+.btn-comprar {
+  display: inline-block;
+  background: #22c55e;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-comprar:hover {
+  background: #16a34a;
+}
+
+/* DIFERENCIAIS */
+.diferenciais h2{
+  color: #fff;
+}
+
+.diferenciais {
+  padding: 60px 0;
+  background: #0f172a;
+  color: #fff;
+  text-align: center;
+}
+
+/* GRID */
+.grid-diferenciais {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ITEM */
+.item-diferencial {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 12px;
+  transition: 0.3s;
+  border: 1px solid #fff; 
+}
+
+.item-diferencial:hover {
+  transform: translateY(-5px);
+}
+
+/* ÍCONE */
+.icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+/* TÍTULO */
+.item-diferencial h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* TEXTO */
+.item-diferencial p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* AVALIAÇÕES */
+.avaliacoes {
+  padding: 60px 0;
+  background: #f8fafc;
+  text-align: center;
+}
+
+/* GRID */
+.grid-avaliacoes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* CARD */
+.card-avaliacao {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  font-style: italic;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: 0.3s;
+  border: 1px solid #0f172a; 
+}
+
+.card-avaliacao:hover {
+  transform: translateY(-5px);
+}
+
+/* TITULO */
+.avaliacoes h2 {
+  color: #0f172a;
+}
+
+/* TEXTO */
+.card-avaliacao p {
+  margin-bottom: 10px;
+}
+
+/* NOME */
+.card-avaliacao h4 {
+  font-size: 14px;
+  color: #0f172a;
+}
+
+/* FOOTER */
+.footer {
+  background: #0f172a;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* TÍTULO */
+.footer h2 {
+  margin-bottom: 10px;
+}
+
+/* TEXTO */
+.footer p {
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+/* BOTÃO */
+.btn-footer {
+  display: inline-block;
+  background: #22c55e;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin: 15px 0;
+  transition: 0.3s;
+}
+
+.btn-footer:hover {
+  background: #16a34a;
+}
+
+/* INSTAGRAM */
+.instagram a {
+  color: #22c55e;
+  text-decoration: none;
+}
+
+/* COPY */
+.copy {
+  font-size: 12px;
+  margin-top: 15px;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    background-position: center;
+  }
+  .nav {
+    display: none; /* some no celular */
+  }
+
+  .logo h1 {
+    font-size: 16px;
+  }
+
+  .btn-whatsapp {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 80vh;
+    padding: 0 20px;
+  }
+
+  .banner h2 {
+    font-size: 28px;
+  }
+
+  .banner p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-produtos {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-diferenciais {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-avaliacoes {
+    grid-template-columns: 1fr;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0F172A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #fff, #636363);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #636363, #fff);
+}
+
+
+
+/* MODAL */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.9);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.3s;
+
+  z-index: 5000; /* 👈 garante que fica acima de tudo */
+}
+
+/* ATIVO */
+.modal:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* IMAGEM */
+.img-grande {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+/* BOTÃO X */
+.fechar {
+  position: fixed; /* 👈 MUITO IMPORTANTE */
+  top: 20px;
+  right: 30px;
+
+  color: #fff;
+  font-size: 35px;
+  text-decoration: none;
+  cursor: pointer;
+
+  z-index: 6000; /* 👈 fica acima da imagem */
+}
+
+.fechar:hover {
+  color: #22c55e;
+}
