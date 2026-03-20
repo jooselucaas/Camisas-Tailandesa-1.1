@@ -20,6 +20,8 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +29,10 @@
 </head>
 
 <body>
+
+  <div class="top-bar">
+    <p>🚚 Frete grátis para Sousa — aproveite por tempo limitado!</p>
+  </div>
 
   <!-- HEADER -->
   <header class="header">
@@ -42,7 +48,7 @@
       </nav>
 
       <a 
-        href="https://wa.me/5599999999999?text=Olá,%20vim%20pelo%20site%20e%20quero%20comprar%20uma%20camisa" 
+        href="https://wa.me/11976187148?text=Olá,%20vim%20pelo%20site%20e%20quero%20comprar%20uma%20camisa" 
         class="btn-whatsapp" 
         target="_blank"
       >
@@ -51,6 +57,14 @@
 
     </div>
   </header>
+
+  <a 
+    href="https://wa.me/11976187148?text=Olá,%20vim%20pelo%20site%20e%20quero%20comprar%20uma%20camisa" 
+    class="whatsapp-fixo" 
+    target="_blank"
+  >
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
   <button id="btnTop">↑</button>
 
@@ -77,6 +91,21 @@
     </div>
   </section>
 
+  <section class="faixa-publicidade">
+    <div class="faixa-track">
+      <span>🔥 QUALIDADE 1.1 PREMIUM</span>
+      <span>🚚 ENVIO RÁPIDO PARA TODO BRASIL</span>
+      <span>💰 PAGAMENTO SEGURO</span>
+      <span>📲 COMPRE PELO WHATSAPP</span>
+
+      <!-- DUPLICA PRA LOOP INFINITO -->
+      <span>🔥 QUALIDADE 1.1 PREMIUM</span>
+      <span>🚚 ENVIO RÁPIDO PARA TODO BRASIL</span>
+      <span>💰 PAGAMENTO SEGURO</span>
+      <span>📲 COMPRE PELO WHATSAPP</span>
+    </div>
+  </section>
+
   <section id="produtos" class="produtos">
     <div class="container">
 
@@ -85,7 +114,7 @@
       <div class="grid-produtos">
 
         <!-- PRODUTO 1 -->
-        <div class="card-produto">
+        <div class="card-produto" id="produto1">
 
           <!-- CLICA E ABRE -->
           <a href="#img1">
@@ -96,7 +125,7 @@
           <p class="preco">R$ 120,00</p>
 
           <a 
-            href="https://wa.me/5599999999999?text=Quero%20a%20camisa%20Flamengo%202024" 
+            href="https://wa.me/11976187148?text=Quero%20a%20camisa%20do%20Flamengo%202026" 
             target="_blank"
             class="btn-comprar"
           >
@@ -107,7 +136,7 @@
 
         <!-- MODAL PRODUTO 1 -->
         <div id="img1" class="modal">
-          <a href="#produtos" class="fechar">✕</a>
+          <a href="#card-produto" class="fechar">✕</a>
           <img src="images/Flamengo.png" class="img-grande">
         </div>
 
@@ -123,7 +152,7 @@
           <p class="preco">R$ 120,00</p>
 
           <a 
-            href="https://wa.me/5599999999999?text=Quero%20a%20camisa%20do%20Brasil%202025" 
+            href="https://wa.me/11976187148?text=Quero%20a%20camisa%20do%20Brasil%202025" 
             target="_blank"
             class="btn-comprar"
           >
@@ -134,7 +163,7 @@
 
         <!-- MODAL PRODUTO 2 -->
         <div id="img2" class="modal">
-          <a href="#produtos" class="fechar">✕</a>
+          <a href="#card-produto" class="fechar">✕</a>
           <img src="images/Brasil.png" class="img-grande">
         </div>
 
@@ -150,7 +179,7 @@
           <p class="preco">R$ 120,00</p>
 
           <a 
-            href="https://wa.me/5599999999999?text=Quero%20a%20camisa%20do%20Corinthians%202025" 
+            href="https://wa.me/11976187148?text=Quero%20a%20camisa%20do%20Corinthians%202025" 
             target="_blank"
             class="btn-comprar"
           >
@@ -161,7 +190,7 @@
 
         <!-- MODAL PRODUTO 3 -->
         <div id="img3" class="modal">
-          <a href="#produtos" class="fechar">✕</a>
+          <a href="#card-produto" class="fechar">✕</a>
           <img src="images/Corin.png" class="img-grande">
         </div>
 
@@ -177,7 +206,7 @@
           <p class="preco">R$ 120,00</p>
 
           <a 
-            href="https://wa.me/5599999999999?text=Quero%20a%20camisa%20do%20São%20Paulo%202025" 
+            href="https://wa.me/11976187148?text=Quero%20a%20camisa%20do%20São%20Paulo%202025" 
             target="_blank"
             class="btn-comprar"
           >
@@ -188,7 +217,7 @@
 
         <!-- MODAL PRODUTO 4 -->
         <div id="img5" class="modal">
-          <a href="#produtos" class="fechar">✕</a>
+          <a href="#card-produto" class="fechar">✕</a>
           <img src="images/Sp.png" class="img-grande">
         </div>
 
@@ -204,7 +233,7 @@
           <p class="preco">R$ 130,00</p>
 
           <a 
-            href="https://wa.me/5599999999999?text=Quero%20a%20camisa%20do%20Brasil%20Retrô%201998" 
+            href="https://wa.me/11976187148?text=Quero%20a%20camisa%20do%20Brasil%20Retrô%201998" 
             target="_blank"
             class="btn-comprar"
           >
@@ -215,7 +244,7 @@
 
         <!-- MODAL PRODUTO 5 -->
         <div id="img4" class="modal">
-          <a href="#produtos" class="fechar">✕</a>
+          <a href="#card-produto" class="fechar">✕</a>
           <img src="images/Brasil Retro.png" class="img-grande">
         </div>
 
@@ -231,7 +260,7 @@
           <p class="preco">R$ 120,00</p>
 
           <a 
-            href="https://wa.me/5599999999999?text=Quero%20a%20camisa%20do%20Corinthians%202025" 
+            href="https://wa.me/11976187148?text=Quero%20a%20camisa%20do%20Corinthians%202025" 
             target="_blank"
             class="btn-comprar"
           >
@@ -242,7 +271,7 @@
 
         <!-- MODAL PRODUTO 6 -->
         <div id="img6" class="modal">
-          <a href="#produtos" class="fechar">✕</a>
+          <a href="#card-produto" class="fechar">✕</a>
           <img src="images/Corin Preta.png" class="img-grande">
         </div>
 
@@ -258,7 +287,7 @@
           <p class="preco">R$ 130,00</p>
 
           <a 
-            href="https://wa.me/5599999999999?text=Quero%20a%20camisa%20do%20Palmeiras%20Retrô%20Parmalat" 
+            href="https://wa.me/11976187148?text=Quero%20a%20camisa%20do%20Palmeiras%20Retrô%20Parmalat" 
             target="_blank"
             class="btn-comprar"
           >
@@ -269,7 +298,7 @@
 
         <!-- MODAL PRODUTO 7 -->
         <div id="img7" class="modal">
-          <a href="#produtos" class="fechar">✕</a>
+          <a href="#card-produto" class="fechar">✕</a>
           <img src="images/Palm Parmalat.png" class="img-grande">
         </div>
 
@@ -285,7 +314,7 @@
           <p class="preco">R$ 130,00</p>
 
           <a 
-            href="https://wa.me/5599999999999?text=Quero%20a%20camisa%20da%20Alemanha%20Retrô%202014" 
+            href="https://wa.me/11976187148?text=Quero%20a%20camisa%20da%20Alemanha%20Retrô%202014" 
             target="_blank"
             class="btn-comprar"
           >
@@ -296,7 +325,7 @@
 
         <!-- MODAL PRODUTO 8 -->
         <div id="img8" class="modal">
-          <a href="#produtos" class="fechar">✕</a>
+          <a href="#card-produto" class="fechar">✕</a>
           <img src="images/Alemanha Retro 2014.png" class="img-grande">
         </div>
 
@@ -312,7 +341,7 @@
           <p class="preco">R$ 130,00</p>
 
           <a 
-            href="https://wa.me/5599999999999?text=Quero%20a%20camisa%20do%20Barcelona%20Retrô" 
+            href="https://wa.me/11976187148?text=Quero%20a%20camisa%20do%20Barcelona%20Retrô" 
             target="_blank"
             class="btn-comprar"
           >
@@ -323,11 +352,36 @@
 
         <!-- MODAL PRODUTO 9 -->
         <div id="img9" class="modal">
-          <a href="#produtos" class="fechar">✕</a>
+          <a href="#card-produto" class="fechar">✕</a>
           <img src="images/Barça Retro.png" class="img-grande">
         </div>
 
       </div>
+
+    </div>
+  </section>
+
+  <section class="catalogo">
+    <div class="container">
+
+      <h2>TRABALHAMOS POR ENCOMENDA</h2>
+
+      <p class="descricao">
+        Não encontrou o modelo que queria? Fica tranquilo 😎  
+        Trabalhamos com encomendas de diversos times e modelos.
+      </p>
+
+      <p class="descricao destaque">
+        Escolha sua camisa no catálogo e fale com a gente no WhatsApp!
+      </p>
+
+      <a 
+        href="https://wa.me/11976187148?text=Olá,%20quero%20ver%20o%20catálogo%20de%20camisas" 
+        target="_blank"
+        class="btn-catalogo"
+      >
+        VER CATÁLOGO
+      </a>
 
     </div>
   </section>
@@ -365,6 +419,22 @@
     </div>
   </section>
 
+  <section class="faixa-publicidade">
+    <div class="faixa-track">
+      <span>🔥 QUALIDADE 1.1 PREMIUM</span>
+      <span>🚚 ENVIO RÁPIDO</span>
+      <span>💰 PAGAMENTO SEGURO</span>
+      <span>📲 COMPRE PELO WHATSAPP</span>
+
+      <!-- DUPLICA PRA LOOP INFINITO -->
+      <span>🔥 QUALIDADE 1.1 PREMIUM</span>
+      <span>🚚 ENVIO RÁPIDO</span>
+      <span>💰 PAGAMENTO SEGURO</span>
+      <span>📲 COMPRE PELO WHATSAPP</span>
+    </div>
+  </section>
+  
+
   <section class="avaliacoes">
     <div class="container">
 
@@ -374,18 +444,39 @@
 
         <!-- AVALIAÇÃO 1 -->
         <div class="card-avaliacao">
+
+          <!-- FOTO OU VÍDEO -->
+          <div class="media-avaliacao">
+            <img src="images/cliente1.jpg" alt="Cliente com camisa">
+            <!-- OU vídeo:
+            <video controls>
+              <source src="videos/cliente1.mp4" type="video/mp4">
+            </video>
+            -->
+          </div>
+
           <p>"Chegou muito rápido e a qualidade é absurda, parece original mesmo!"</p>
           <h4>- Lucas</h4>
         </div>
 
         <!-- AVALIAÇÃO 2 -->
         <div class="card-avaliacao">
+
+          <div class="media-avaliacao">
+            <img src="images/cliente2.jpg" alt="Cliente com camisa">
+          </div>
+
           <p>"Comprei 2 camisas e vou comprar mais, vale muito a pena!"</p>
           <h4>- Rafael</h4>
         </div>
 
         <!-- AVALIAÇÃO 3 -->
         <div class="card-avaliacao">
+
+          <div class="media-avaliacao">
+            <img src="images/cliente3.jpg" alt="Cliente com camisa">
+          </div>
+
           <p>"Atendimento top no WhatsApp e entrega dentro do prazo."</p>
           <h4>- Marcos</h4>
         </div>
@@ -399,11 +490,11 @@
     <div class="container">
 
       <h2>CAMISA TAILANDESA 1.1 - SOUSA-PB</h2>
-      <p>Sua loja de Camisas ESPORTIVAS ⚽🔥</p>
+      <p>Loja de Camisas ESPORTIVAS ⚽🔥</p>
 
       <!-- Botão WhatsApp -->
       <a 
-        href="https://wa.me/5599999999999?text=Olá,%20vim%20pelo%20site%20e%20quero%20mais%20informações" 
+        href="https://wa.me/11976187148?text=Olá,%20vim%20pelo%20site%20e%20quero%20mais%20informações" 
         target="_blank"
         class="btn-footer"
       >
@@ -417,7 +508,11 @@
 
       <!-- Direitos -->
       <p class="copy">
-        © 2026 Zone Of Tech - Todos os direitos reservados
+        © 2026 
+        <a href="https://www.instagram.com/zoneoftech.com.br/" target="_blank" class="link-instagram">
+          Zone Of Tech
+        </a> 
+        - Todos os direitos reservados
       </p>
 
     </div>
