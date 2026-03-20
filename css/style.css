@@ -13,6 +13,31 @@
   padding: 0 20px;
 }
 
+.top-bar {
+  width: 100%;
+  background: #22c55e;
+  color: #fff;
+
+  text-align: center;
+  padding: 6px 10px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  animation: aparecer 0.5s ease;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* HEADER */
 .header {
   width: 100%;
@@ -66,13 +91,45 @@
   background: #16a34a;
 }
 
+.whatsapp-fixo {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+
+  width: 60px;
+  height: 60px;
+
+  background: #25D366;
+  color: #fff;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+  z-index: 3000;
+
+  transition: 0.3s;
+}
+
+/* HOVER */
+.whatsapp-fixo:hover {
+  transform: scale(1.1);
+  background: #1ebe5d;
+}
+
 /* BOTÃO VOLTAR AO TOPO */
 #btnTop {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #22c55e;
-  color: #fff;
+  background: #fff;
+  color: #0F172A;
   border: none;
 
   width: 50px;   /* 👈 largura fixa */
@@ -93,11 +150,7 @@
 }
 
 #btnTop:hover {
-  background: #16a34a;
-}
-
-#btnTop:hover {
-  background: #16a34a;
+  background: #1B2335;
 }
 
 /* FUNDO ESCURO */
@@ -121,6 +174,7 @@
 .popup-content {
   background: #0f172a;
   color: #fff;
+  border: 1px solid #22c55e; 
 
   padding: 30px;
   border-radius: 12px;
@@ -228,13 +282,13 @@
 /* SEÇÃO */
 .produtos {
   padding: 60px 0;
-  background: #f8fafc;
+  background: #1B2335;
   text-align: center;
 }
 
 /* TÍTULO */
 .titulo-secao {
-  color: #0f172a;
+  color: #fff;
   font-size: 28px;
   margin-bottom: 40px;
 }
@@ -248,11 +302,11 @@
 
 /* CARD */
 .card-produto {
-  background: #fff;
+  background: #0F172A;
   border-radius: 12px;
   padding: 15px;
   transition: 0.3s;
-  border: 1px solid #22c55e; 
+  border: 1px solid #fff; 
 }
 
 .card-produto:hover {
@@ -268,7 +322,7 @@
 
 /* NOME */
 .card-produto h3 {
-  color: #0f172a;
+  color: #fff;
   font-size: 18px;
   margin: 10px 0;
 }
@@ -293,6 +347,63 @@
 
 .btn-comprar:hover {
   background: #16a34a;
+}
+
+/* SEÇÃO CATÁLOGO */
+.catalogo {
+  padding: 60px 20px;
+  background: #0f172a;
+  color: #fff;
+  text-align: center;
+}
+
+/* TÍTULO */
+.catalogo h2 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+/* TEXTO */
+.catalogo .descricao {
+  max-width: 500px;
+  margin: 0 auto 10px;
+  color: #ccc;
+}
+
+/* DESTAQUE */
+.catalogo .destaque {
+  color: #22c55e;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* BOTÃO */
+.btn-catalogo {
+  display: inline-block;
+  padding: 10px 23px;
+
+  background: #22c55e;
+  color: #fff;
+
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.btn-catalogo:hover {
+  background: #16a34a;
+  transform: scale(1.05);
+}
+
+.catalogo {
+  padding: 60px 20px;
+  background: #0f172a;
+  color: #fff;
+  text-align: center;
+
+  border-bottom: 2px solid #22C55E; /* 👈 linha branca */
 }
 
 /* DIFERENCIAIS */
@@ -345,10 +456,46 @@
   color: #ccc;
 }
 
+/* FAIXA */
+.faixa-publicidade {
+  width: 100%;
+  overflow: hidden;
+  background: #0f172a;
+  border-top: 2px solid #22c55e;
+  border-bottom: 2px solid #22c55e;
+}
+
+/* TRACK (ANIMAÇÃO) */
+.faixa-track {
+  display: flex;
+  gap: 50px;
+  padding: 10px 0;
+
+  width: max-content;
+  animation: rolar 15s linear infinite;
+}
+
+/* TEXTO */
+.faixa-track span {
+  color: #fff;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ANIMAÇÃO */
+@keyframes rolar {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 /* AVALIAÇÕES */
 .avaliacoes {
   padding: 60px 0;
-  background: #f8fafc;
+  background: #1B2335;
   text-align: center;
 }
 
@@ -361,13 +508,13 @@
 
 /* CARD */
 .card-avaliacao {
-  background: #fff;
+  background: #0F172A;
   padding: 20px;
   border-radius: 12px;
   font-style: italic;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   transition: 0.3s;
-  border: 1px solid #0f172a; 
+  border: 1px solid #fff; 
 }
 
 .card-avaliacao:hover {
@@ -376,18 +523,31 @@
 
 /* TITULO */
 .avaliacoes h2 {
-  color: #0f172a;
+  color: #fff;
 }
 
 /* TEXTO */
 .card-avaliacao p {
+  color: #fff;
   margin-bottom: 10px;
 }
 
 /* NOME */
 .card-avaliacao h4 {
   font-size: 14px;
-  color: #0f172a;
+  color: #fff;
+}
+
+/* MEDIA (FOTO/VÍDEO) */
+.media-avaliacao {
+  margin-bottom: 15px;
+}
+
+.media-avaliacao img,
+.media-avaliacao video {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 /* FOOTER */
@@ -487,6 +647,7 @@
   .grid-avaliacoes {
     grid-template-columns: 1fr;
   }
+  
 }
 
 ::-webkit-scrollbar {
